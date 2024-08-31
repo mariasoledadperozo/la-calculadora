@@ -1,4 +1,22 @@
-const input = document.getElementById('input'); 
-const botones = document.querySelectorAll('input[type="button"]')
+var input = document.getElementById('input');
+var operacionActual; 
 
-botones.forEach
+function actualizarInput() {
+    input.value = operacionActual;
+}
+
+function colocarNumero(numero){
+    operacionActual += numero; 
+    actualizarPantalla(); 
+}
+
+function agregarOperador(operador){
+    operacionActual+=operador; 
+    actualizarPantalla(); 
+}
+
+function limpiarInput(){
+    input.value=" "; 
+    actualizarPantalla(); 
+}
+
