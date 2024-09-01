@@ -1,22 +1,6 @@
-var input = document.getElementById('input');
-var operacionActual; 
+var resultado = document.getElementById('resultado').value; 
+var boton = document.getElementById('button').value; 
 
-function actualizarInput() {
-    input.value = operacionActual;
+boton.onclick = function(value){
+    resultado.value += this.value; 
 }
-
-function colocarNumero(numero){
-    operacionActual += numero; 
-    actualizarPantalla(); 
-}
-
-function agregarOperador(operador){
-    operacionActual+=operador; 
-    actualizarPantalla(); 
-}
-
-function limpiarInput(){
-    input.value=" "; 
-    actualizarPantalla(); 
-}
-
